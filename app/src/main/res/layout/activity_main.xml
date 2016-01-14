@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Write a message to send:"
+        android:id="@+id/txvMessage" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:lines="4"
+        android:gravity="top"
+        android:id="@+id/txtMessage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Subject:"
+        android:visibility="gone"
+        android:id="@+id/lblSubject" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/txtSubject" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Just send this cat instead:"
+        android:id="@+id/chkCat" />
+
+    <ImageView
+        android:layout_width="134dp"
+        android:layout_height="101dp"
+        android:src="@drawable/cat"
+        android:id="@+id/imgCat" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose app menually"
+            android:onClick="HideEmail"
+            android:checked="true"
+            android:id="@+id/rdbMenually" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send via WhatsApp"
+            android:onClick="HideEmail"
+            android:id="@+id/rdbWhatsappA" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send via Email"
+            android:onClick="ShowEmail"
+            android:id="@+id/rdbEmail" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:onClick="SendMessage"
+        android:id="@+id/btnSend" />
+</LinearLayout>
