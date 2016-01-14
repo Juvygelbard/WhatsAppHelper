@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private TextView _emailLabel;
     private EditText _emailSubject;
+    private String torsField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
